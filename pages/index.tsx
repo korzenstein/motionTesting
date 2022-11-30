@@ -45,6 +45,11 @@ export default function Home() {
     on: {transform: 'translate3d(250%, 0, 0rem) rotate3d(0, 1, 0, 120deg)'},
     off: {transform: 'translate3d(0%, 0, 0rem) rotate3d(0, 1, 0, 0deg)'}
   }
+
+  // const variantMain = {
+  //   on: 
+  //   off:
+  // }
   return (
     <div>
       <Head>
