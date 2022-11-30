@@ -4,6 +4,8 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  width: 100vw;
+  height: 100vh;
 }
 
 a {
@@ -14,13 +16,107 @@ a {
 * {
   box-sizing: border-box;
 }
+.container {
+  margin: 0 auto;
+  width: 90%;
+  padding: 3rem 0;
+  height: 100vh;
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
 }
+
+.outer {
+  display: grid;
+  grid-template: 1fr / 1fr;
+  border: 1px solid black;
+  height: 100%;
+  perspective: 400rem;
+  perspective-origin: (50% 10%);
+}
+
+.cardy {
+  display: block;
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+  transform-style: preserve-3d;
+}
+
+.cardy:nth-child(1) {
+  background-color: red;
+  width: 30%;
+  height: 100%;
+  /* transform: translate3d(0, 0, -200rem) rotate3d(0, 1, 0, 60deg); */
+  border: solid 1px black;
+}
+
+.cardy:nth-child(2) {
+  background-color: gold;
+  width: 30%;
+  height: 100%;
+  /* transform: translate3d(0%, 0%, -100rem) rotate3d(0, 1, 0, 60deg); */
+  border: solid 1px black;
+}
+
+.cardy:nth-child(3) {
+  background-color: blue;
+  width: 30%;
+  height: 100%;
+  /* transform: translate3d(0, 0, 0) rotate3d(0, 1, 0, 60deg); */
+  border: solid 1px black;
+}
+
+
+.cardy:nth-child(4) {
+  background-color: red;
+  width: 30%;
+  height: 100%;
+  /* transform: translate3d(250%, 0, -200rem) rotate3d(0, 1, 0, 120deg); */
+  border: solid 1px black;
+}
+.cardy:nth-child(5) {
+  background-color: gold;
+  width: 30%;
+  height: 100%;
+  /* transform: translate3d(250%, 0, -100rem) rotate3d(0, 1, 0, 120deg); */
+  border: solid 1px black;
+}
+.cardy:nth-child(6) {
+  background-color: blue;
+  width: 30%;
+  height: 100%;
+  /* transform: translate3d(250%, 0, 0rem) rotate3d(0, 1, 0, 120deg); */
+  border: solid 1px black;
+}
+
+/* .scene {
+  gap: 1rem;
+  position: relative;
+  perspective: 300rem;
+  perspective-origin: (50% 10%);
+  border: 1px solid black;
+} */
+
+/* .card {
+  left: 50%;
+  width: 10rem;
+  height: 12rem;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: absolute;
+  background: blue;
+  border: black solid 1px;
+} */
+/* 
+.zero {
+  top: 50%;
+  z-index: 0;
+  transform: translate3d(-50%, -50%, 40px);
+  background: red;
+}
+
+.one {
+  top: 40%;
+  z-index: 10;
+  transform: translate3d(-50%, -50%, 90px);
+} */
+
